@@ -19,4 +19,4 @@ console.log(req.url);
             res.end();
         }
     });
-}).listen(process.env.PORT, '0.0.0.0', () => console.log('server bound)); 
+}).listen(process.env.PORT, '0.0.0.0', () => console.log('server bound')); 

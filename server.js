@@ -1,4 +1,5 @@
 const { Server } = require('http');
+console.log(process.env.PORT);
 Server((req, res) => {
 console.log(req.url);
     let body = '';

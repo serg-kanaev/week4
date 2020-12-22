@@ -19,4 +19,4 @@ console.log(req.url);
             res.end();
         }
     });
-}).listen(3000); 
+}).listen(process.env.PORT, '0.0.0.0', () => console.log('index bound')); 

@@ -1,6 +1,6 @@
 const { Server } = require('http');
 console.log(process.env.PORT);
-Server((req, res) => {
+let server = Server((req, res) => {
 console.log(req.url);
     let body = '';
     req.on('data', data => body += data);
@@ -20,4 +20,6 @@ console.log(req.url);
             res.end();
         }
     });
-}).listen(process.env.PORT, '0.0.0.0', () => console.log('server bound')); 
+});
+server.listen(process.env.PORT, '0.0.0.0', () => console.log('server bound'));
+server.on('error', () => console.log('error'));
